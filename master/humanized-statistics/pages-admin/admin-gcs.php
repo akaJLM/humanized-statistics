@@ -310,7 +310,7 @@ function gcs_do_admin_page()
 			?>
 		  </label></td>
 		<td scope="row">
-        <div id="qzone"><input type="radio" id="qzone1" name="qzone_referer" value="qzone.qq.com" <?php if($temp == 'qzone.qq.com'){ echo 'checked="checked"';}?> /><label for="qzone1">On</label>
+        <div id="qzone"><input type="radio" id="qzone1" name="qzone_referer" value="qq.com" <?php if($temp == 'qq.com'){ echo 'checked="checked"';}?> /><label for="qzone1">On</label>
 		<input type="radio" id="qzone2" name="qzone_referer" value="" <?php if($temp == ''){ echo 'checked="checked"';}?> /><label for="qzone2">Off</label></div>
         </td>
          <td scope="row">&nbsp;</td>

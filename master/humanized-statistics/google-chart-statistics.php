@@ -75,10 +75,10 @@ if(is_admin())
 			'linkedin_referer' => 'linkedin.com',
 			'pinterest_referer' => 'pinterest.com',
 			'scoop_referer' => 'scoop.it',
-			'qzone_referer' => 'qzone.qq.com',
+			'qzone_referer' => 'qq.com',
 			'weibo_referer' => 'weibo.com',
 			'vk_referer' => 'vk.com',
-			'gcs_social' => 'facebook.com,twitter.com,plus.google.com,linkedin.com,pinterest.com,scoop.it,weibo.com,qzone.qq.com,vk.com'
+			'gcs_social' => 'facebook.com,twitter.com,plus.google.com,linkedin.com,pinterest.com,scoop.it,weibo.com,qq.com,vk.com'
 		);
 	
 		foreach ($settings as $key => $value)
