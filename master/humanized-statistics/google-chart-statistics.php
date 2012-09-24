@@ -236,8 +236,6 @@ function gcs_filter_statistics($content)
 			$userip = gcs_ip();
 			$verif_ip = $userip;
 			
-			var_dump($userip);
-			
 			$browser_language = getDefaultLanguage();
 			
 			//Filter IP and Total known visitors statistics + known users by browser languages
