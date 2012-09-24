@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: wp google chart statistics
+Plugin Name: humanized statistics
 Plugin URI: http://kwark.allwebtuts.net
-Description: Statistics for wordpress
+Description: Statistics for wordpress by posts, by pages and for home page (sticky posts/normal posts, and by catagories
 Author: Laurent (KwarK) Bertrand
 Version: 0.1
 Author URI: http://kwark.allwebtuts.net
@@ -38,7 +38,7 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
 
 // General plugins path or url
 $GLOBALS['gcs_plugin_path'] = $gcs_plugin_path = PLUGIN_DIR_PATH(__FILE__);
-$GLOBALS['gcs_plugin_url'] = $gcs_plugin_url = WP_PLUGIN_URL . '/wp-google-chart-statistics/';
+$GLOBALS['gcs_plugin_url'] = $gcs_plugin_url = WP_PLUGIN_URL . '/humanized-statistics/';
 $GLOBALS['gcs_url'] = $gcs_url = home_url;
 
 //langages
