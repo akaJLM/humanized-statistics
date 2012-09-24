@@ -1,8 +1,8 @@
-=== humanized statistics ===
+=== Humanized statistics ===
 
 Contributors: KwarK
 Donate link: http://kwark.allwebtuts.net/
-Tags: Google chart tools, Api google Chart, statistics users, wordpress
+Tags: statistics users, statistics by page, statistics by categories, statistics for home page, wordpress plugin, Google chart tools, Api google Chart
 Tested up to: 3.4.2
 Stable tag: 0.1
 
@@ -17,7 +17,7 @@ In the futur, maybe the plugin creates some humanized and dynamics things (like 
 Currently, the plugin requests only if is not your home page and the time to creates all the datas is ~250 ms. The plugin have an option to decrease request by user like 1/2 or 1/5 or 1/10 users, etc...
 
 I think ~250ms it is too much. When my skill is up to date too with other technical with wordpress I will make some update.
-If it's difficult to decrease these 250ms, The solution profitable for these 250ms is to create more result in administration, more dynamics widgets and more comparison with more survey by cron task.
+If it's difficult to decrease these 250ms, The solution profitable for these 250ms is to create more result in administration, more dynamics widgets and more comparison with more survey option (by cron task) to make profitable the loading time.
 
 == Installation ==
 
