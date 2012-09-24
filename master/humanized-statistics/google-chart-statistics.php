@@ -463,16 +463,20 @@ function gcs_filter_statistics($content)
 				$count = 0;
 				$count = $gcs['gcs_browser_'.$navigator.''][0];
 				
+				//Update counter by navigator
 				$up = $count + $mule;
 				update_post_meta($id, 'gcs_browser_'.$navigator.'', $up);
 				
+				//Update number queries
 				$up = get_num_queries();
 				update_post_meta($id, 'gcs_total_queries', $up);
 				
+				//Update memory peak usage
 				$up = memory_get_peak_usage();
 				$up = $up/1024/1024;
 				update_post_meta($id, 'gcs_total_memory', $up);
 				
+				//Update time to load by navigator
 				$count = $gcs['gcs_total_loadtime_when_'.$navigator.''][0];
 				if(!$count)
 				{

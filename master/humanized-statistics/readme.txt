@@ -2,7 +2,7 @@
 
 Contributors: KwarK
 Donate link: http://kwark.allwebtuts.net/
-Tags: Google chart tools, Api google Chart, statistics users, statistics by page, statistics by categories, statistics for home page, wordpress plugin
+Tags: statistics users, statistics by page, statistics by categories, statistics for home page, wordpress plugin, Google chart tools, Api google Chart
 Tested up to: 3.4.2
 Stable tag: 0.1
 
