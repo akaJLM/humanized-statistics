@@ -117,29 +117,42 @@ function gcs_do_admin_page()
 		</p>
         <script type="text/javascript">
           jQuery(document).ready(function($){
-			<?php /*?>$( "#gcs_divisor_slider" ).slider({
-				value:<?php $temp = get_option('gcs_request_divisor'); if(!$temp){echo (int)1;}else {echo (int)$temp;} ?>,
-				min: 1,
-				max: 1000,
-				slide: function( event, ui ) {
-					$( "#gcs_request_divisor" ).val( ui.value );
-				}
-			});
-			$( "#gcs_request_divisor" ).val( $( "#gcs_divisor_slider" ).slider( "value" ) );<?php */?>
-			
-			
+			  
 			var valMap = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000];
+			
 			$("#gcs_divisor_slider").slider({
 				range: false,
 				min: 0,
 				max: 12,
-				values: [0],
+				values: <?php 
+				
+				$temp = get_option('gcs_request_divisor'); 
+				$valMap = array(1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000);
+				
+				foreach($valMap as $key => $value)
+				{
+					if($value == $temp)
+					{
+						echo '['.$key.']';
+					}
+				}
+				?>,
 				slide: function(event, ui) {                        
-						$("#gcs_request_divisor").val(valMap[ui.values[0]]);       
+						$("#gcs_request_divisor").val(valMap[ui.values[0]]);    
 				}  
 			});
-			$("#gcs_request_divisor").val(<?php $temp = get_option('gcs_request_divisor'); echo (int)$temp; ?>);
-	
+			$("#gcs_request_divisor").val(
+			<?php 
+			foreach($valMap as $key => $value)
+			{
+				if($value == $temp)
+				{
+					echo 'valMap['.$key.']';
+				}
+			} 
+			?>
+			);
+			
 			//Theme
 			$("#themify").buttonset();
 			$("#dchart").buttonset();
