@@ -41,25 +41,22 @@ $GLOBALS['gcs_plugin_path'] = $gcs_plugin_path = PLUGIN_DIR_PATH(__FILE__);
 $GLOBALS['gcs_plugin_url'] = $gcs_plugin_url = WP_PLUGIN_URL . '/humanized-statistics/';
 $GLOBALS['gcs_url'] = $gcs_url = home_url;
 
-//langages
-load_plugin_textdomain( 'gcs', true, dirname( plugin_basename( __FILE__ ) ) . '/wp-languages/' );
-
-
-
-//Basics for admin page
-add_action('admin_menu', 'gcs_options_page');
-
-function gcs_options_page()
-{
-	add_menu_page('Statistics', __('Statistics', 'gcs'), 'manage_options', 'google-chart-statistics.php');
-	add_submenu_page('google-chart-statistics.php', 'General config', __('General configuration', 'gcs'), 'manage_options', 'google-chart-statistics.php', 'gcs_do_admin_page');
-	
-	do_action('gcs_add_admin_sub_menus'); //plugin api
-}
-
-
 if(is_admin())
 {
+	//Basics for admin page
+	add_action('admin_menu', 'gcs_options_page');
+	
+	function gcs_options_page()
+	{
+		add_menu_page('Statistics', __('Statistics', 'gcs'), 'manage_options', 'google-chart-statistics.php');
+		add_submenu_page('google-chart-statistics.php', 'General config', __('General configuration', 'gcs'), 'manage_options', 'google-chart-statistics.php', 'gcs_do_admin_page');
+		
+		do_action('gcs_add_admin_sub_menus'); //plugin api
+	}
+
+	//langages
+	load_plugin_textdomain( 'gcs', true, dirname( plugin_basename( __FILE__ ) ) . '/wp-languages/' );
+	
     wp_register_style('gcs-admincss', plugins_url('css/admin.css', __FILE__));
     wp_enqueue_style('gcs-admincss');
 	
