@@ -17,7 +17,7 @@ In the futur, maybe the plugin creates some humanized and dynamics things (like 
 Currently, the plugin requests only if is not your home page and the time to creates all the datas is ~250 ms. The plugin have an option to decrease request by user like 1/2 or 1/5 or 1/10 users, etc...
 
 I think ~250ms it is too much. When my skill is up to date too with other technical with wordpress I will make some update.
-If it's difficult to decrease these 250ms, The solution profitable for these 250ms is to create more result in administration, more dynamics widgets and more comparison with more survey option (by cron task).
+If it's difficult to decrease these 250ms, The solution profitable for these 250ms is to create more result in administration, more dynamics widgets and more comparison with more survey option (by cron task) to make profitable the loading time.
 
 == Installation ==
 
