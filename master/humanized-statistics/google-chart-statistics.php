@@ -207,7 +207,7 @@ function gcs_filter_statistics($content)
 {
 	if(!is_home() && !is_front_page())
 	{
-		$idp = get_the_ID();
+		global $id;
 		
 		$mule = get_option('gcs_request_divisor');
 		
@@ -215,10 +215,10 @@ function gcs_filter_statistics($content)
 		$mule = 1;
 		
 		$hit = 0; 
-		$hit = get_post_meta($idp, 'gcs_hit', true);
+		$hit = get_post_meta($id, 'gcs_hit', true);
 		
 		$up = $hit + 1;
-		update_post_meta($idp, 'gcs_hit', $up);
+		update_post_meta($id, 'gcs_hit', $up);
 		
 		$counter = $hit / $mule;
 		
@@ -229,9 +229,9 @@ function gcs_filter_statistics($content)
 		{
 			global $user_ID, $blog_id, $is_iphone, $is_chrome, $is_safari, $is_NS4, $is_opera, $is_macIE, $is_winIE, $is_gecko, $is_lynx, $is_IE;
 			//Get all meta (one request)
-			$gcs = get_post_meta($idp);
+			$gcs = get_post_meta($id);
 
-			update_post_meta($idp, 'gcs_hit', 1);
+			update_post_meta($id, 'gcs_hit', 1);
 			
 			$userip = gcs_ip();
 			$verif_ip = $userip;
@@ -254,7 +254,7 @@ function gcs_filter_statistics($content)
 				$count = $gcs['gcs_total_known'][0];
 				
 				$up = $count + $mule;
-				update_post_meta($idp, 'gcs_total_known', $up);
+				update_post_meta($id, 'gcs_total_known', $up);
 				
 				
 				//Total visit known users by browser languages
@@ -264,7 +264,7 @@ function gcs_filter_statistics($content)
 					$count = $gcs['gcs_total_known_'.$browser_language.''][0];
 					
 					$up = $count + $mule;
-					update_post_meta($idp, 'gcs_total_known_'.$browser_language.'', $up);
+					update_post_meta($id, 'gcs_total_known_'.$browser_language.'', $up);
 				}
 				
 				//Update user meta prefered categories
@@ -296,7 +296,7 @@ function gcs_filter_statistics($content)
 					$count = $gcs['gcs_total_unknown'][0];
 					
 					$up = $count + $mule;
-					update_post_meta($idp, 'gcs_total_unknown', $up);
+					update_post_meta($id, 'gcs_total_unknown', $up);
 					
 					//Total visit unknown users by browser languages
 					if($browser_language)
@@ -305,7 +305,7 @@ function gcs_filter_statistics($content)
 						$count = $gcs['gcs_total_unknown_'.$browser_language.''][0];
 						
 						$up = $count + $mule;
-						update_post_meta($idp, 'gcs_total_unknown_'.$browser_language.'', $up);
+						update_post_meta($id, 'gcs_total_unknown_'.$browser_language.'', $up);
 					}
 				}
 				
@@ -317,7 +317,7 @@ function gcs_filter_statistics($content)
 					$count = $gcs['gcs_total_known'][0];
 					
 					$up = $count + $mule;
-					update_post_meta($idp, 'gcs_total_known', $up);
+					update_post_meta($id, 'gcs_total_known', $up);
 					
 					//Total visit known users by browser languages
 					if($browser_language)
@@ -326,7 +326,7 @@ function gcs_filter_statistics($content)
 						$count = $gcs['gcs_total_known_'.$browser_language.''][0];
 						
 						$up = $count + $mule;
-						update_post_meta($idp, 'gcs_total_known_'.$browser_language.'', $up);
+						update_post_meta($id, 'gcs_total_known_'.$browser_language.'', $up);
 					}
 					
 					//Total known visitor disconnected
@@ -334,7 +334,7 @@ function gcs_filter_statistics($content)
 					$count = $gcs['gcs_total_known_disconnected'][0];
 					
 					$up = $count + $mule;
-					update_post_meta($idp, 'gcs_total_known_disconnected', $up);
+					update_post_meta($id, 'gcs_total_known_disconnected', $up);
 				}
 			}
 			
@@ -368,7 +368,7 @@ function gcs_filter_statistics($content)
 						$count = $gcs['gcs_social-'.$referer_name.''][0];
 						
 						$up = $count + $mule;
-						update_post_meta($idp, 'gcs_social-'.$referer_name.'', $up);
+						update_post_meta($id, 'gcs_social-'.$referer_name.'', $up);
 					}
 				}
 			
@@ -383,27 +383,27 @@ function gcs_filter_statistics($content)
 					$count = $gcs['gcs_internal'][0];
 					
 					$up = $count + $mule;
-					update_post_meta($idp, 'gcs_internal', $up);
+					update_post_meta($id, 'gcs_internal', $up);
 				}
 				
 				//Update where referer is home page
-				if(!is_sticky($idp) && $referer == $site_url)
+				if(!is_sticky($id) && $referer == $site_url)
 				{
 					$count = 0;
 					$count = $gcs['gcs_referer_home'][0];
 					
 					$up = $count + $mule;
-					update_post_meta($idp, 'gcs_referer_home', $up);
+					update_post_meta($id, 'gcs_referer_home', $up);
 				}
 				
 				//Update by is_sticky from home page
-				if(is_sticky($idp) && $referer == $site_url)
+				if(is_sticky($id) && $referer == $site_url)
 				{
 					$count = 0;
 					$count = $gcs['gcs_sticky_home'][0];
 					
 					$up = $count + $mule;
-					update_post_meta($idp, 'gcs_sticky_home', $up);
+					update_post_meta($id, 'gcs_sticky_home', $up);
 				}
 				
 				//Update for search organics
@@ -417,7 +417,7 @@ function gcs_filter_statistics($content)
 					$count = $gcs['gcs_organics-'.$name.''][0];
 					
 					$up = $count + $mule;
-					update_post_meta($idp, 'gcs_organics-'.$name.'', $up);
+					update_post_meta($id, 'gcs_organics-'.$name.'', $up);
 				}
 			}
 			
@@ -431,7 +431,7 @@ function gcs_filter_statistics($content)
 				$count = $gcs['gcs_category_'.$cat.''][0];
 				
 				$up = $count + $mule;
-				update_post_meta($idp, 'gcs_category_'.$cat.'', $up);
+				update_post_meta($id, 'gcs_category_'.$cat.'', $up);
 			}
 			
 			//Update for browsers
@@ -464,14 +464,14 @@ function gcs_filter_statistics($content)
 				$count = $gcs['gcs_browser_'.$navigator.''][0];
 				
 				$up = $count + $mule;
-				update_post_meta($idp, 'gcs_browser_'.$navigator.'', $up);
+				update_post_meta($id, 'gcs_browser_'.$navigator.'', $up);
 				
 				$up = get_num_queries();
-				update_post_meta($idp, 'gcs_total_queries', $up);
+				update_post_meta($id, 'gcs_total_queries', $up);
 				
 				$up = memory_get_peak_usage();
 				$up = $up/1024/1024;
-				update_post_meta($idp, 'gcs_total_memory', $up);
+				update_post_meta($id, 'gcs_total_memory', $up);
 				
 				$count = $gcs['gcs_total_loadtime_when_'.$navigator.''][0];
 				if(!$count)
@@ -482,7 +482,7 @@ function gcs_filter_statistics($content)
 				
 				if($up < $count)
 				{
-					update_post_meta($idp, 'gcs_total_loadtime_when_'.$navigator.'', $up);
+					update_post_meta($id, 'gcs_total_loadtime_when_'.$navigator.'', $up);
 				}
 			}
 			//Update visitors by countries (LEAVE COMMENTED! GEOIP php extension needed! Chart for countries currently not builded!)
@@ -491,10 +491,10 @@ function gcs_filter_statistics($content)
 			{
 				$country = preg_replace(array('# #', '#%20#'), array('_', '_'), strtolower($country));
 				$count = 0;
-				$count = get_post_meta($idp, 'gcs_geoip_'.$country.'', true);
+				$count = get_post_meta($id, 'gcs_geoip_'.$country.'', true);
 				
 				$up = $count + $mule;
-				update_post_meta($idp, 'gcs_geoip_'.$country.'', $up);
+				update_post_meta($id, 'gcs_geoip_'.$country.'', $up);
 			}*/
 		}
 		//ONLY HERE FOR PERFORMANCE TEST ON LOCALHOST - LEAVE COMMENTED
