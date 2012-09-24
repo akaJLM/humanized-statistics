@@ -26,7 +26,7 @@ function gcs_do_home_stats_page()
 	   	<div class="icon32" id="icon-tools"><br />
 	  	</div>
 	  	<h2>
-		<?php _e('Google chart statistics - Home statistics', 'gcs'); ?>
+		<?php _e('Humanized statistics - Home statistics', 'gcs'); ?>
 	  	</h2>
         <script type="text/javascript">
 		// Load the Visualization API and the piechart package.

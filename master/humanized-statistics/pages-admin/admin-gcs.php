@@ -109,7 +109,7 @@ function gcs_do_admin_page()
 	   	<div class="icon32" id="icon-tools"><br />
 	  	</div>
 	  	<h2>
-		<?php _e('Google chart statistics - General configuration', 'gcs'); ?>
+		<?php _e('Humanized statistics - General configuration', 'gcs'); ?>
 	  	</h2>
 	  	<form method="post" action="" class="gcs_admin">
 		<p class="submit">
