@@ -57,8 +57,8 @@ if(is_admin())
 	//langages
 	load_plugin_textdomain( 'gcs', true, dirname( plugin_basename( __FILE__ ) ) . '/wp-languages/' );
 	
-    wp_register_style('gcs-admincss', plugins_url('css/admin.css', __FILE__));
-    wp_enqueue_style('gcs-admincss');
+	wp_register_style('gcs-admincss', plugins_url('css/admin.css', __FILE__));
+	wp_enqueue_style('gcs-admincss');
 	
 	//Default on installation hook
 	function gcs_add_defaut_settings()
