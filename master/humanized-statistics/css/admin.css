@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* CSS Document */
+span.gcs_help {height:16px; width:16px; background:url('../images/help.gif') no-repeat; float:right; cursor:help}
+table.widefat tr td{vertical-align:middle;}
+div.gcs_chart, div.gcs_chart table tbody tr{display:inline-table};

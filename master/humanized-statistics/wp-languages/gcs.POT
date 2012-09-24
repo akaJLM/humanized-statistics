@@ -1,0 +1,258 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gcs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-20 20:22+0100\n"
+"PO-Revision-Date: 2012-08-20 20:23+0100\n"
+"Last-Translator: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
+"Language-Team: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: google-chart-statistics.php:18
+#: pages-admin/admin-cats.php:8
+#: pages-admin/admin-gcs.php:8
+#: pages-admin/admin-home.php:8
+msgid "Sorry, but you cannot access this page directly."
+msgstr ""
+
+#: google-chart-statistics.php:35
+msgid "Statistics"
+msgstr ""
+
+#: google-chart-statistics.php:36
+msgid "General configuration"
+msgstr ""
+
+#: pages-admin/admin-cats.php:15
+msgid "Stats by categories"
+msgstr ""
+
+#: pages-admin/admin-cats.php:29
+msgid "Google chart statistics - Categories statistics"
+msgstr ""
+
+#: pages-admin/admin-cats.php:33
+msgid "Statistics categories most visited by all users"
+msgstr ""
+
+#: pages-admin/admin-cats.php:90
+msgid "Currently no datas for categories most visited"
+msgstr ""
+
+#: pages-admin/admin-cats.php:96
+msgid "Statistics categories most prefered by known users"
+msgstr ""
+
+#: pages-admin/admin-cats.php:158
+msgid "Currently no datas for categories prefered by known users"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:103
+msgid "Your settings have been saved"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:112
+msgid "Google chart statistics - General configuration"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:116
+#: pages-admin/admin-gcs.php:355
+msgid "Save Changes"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:166
+msgid "Options plugin theme in dashboard"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:169
+msgid "Themify the plugin with..."
+msgstr ""
+
+#: pages-admin/admin-gcs.php:181
+msgid "Themify your administration (bar, buttons,...)"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:186
+msgid "Themify datas with 3D Chart"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:197
+msgid "Themify your visual datas with Chart 3D"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:201
+msgid "Options performance"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:204
+msgid "Collect statistics of 1 user every..."
+msgstr ""
+
+#: pages-admin/admin-gcs.php:210
+msgid "Decrease request if your site has a lot of visitors. This option don't affects any others statistics and the plugin creates an accurate assessment. You may leave 1 to disable this option and hit 1/1 user. You may use left and right arrow keys on your keyboard to decrease or increase this option."
+msgstr ""
+
+#: pages-admin/admin-gcs.php:213
+msgid "Options social networks referers"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:213
+msgid "World"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:216
+msgid "Collect statistics for Facebook referer"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:226
+msgid "Turn Off or On for statistics survey of facebook.com"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:231
+msgid "Collect statistics for Twitter referer"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:241
+msgid "Turn Off or On for statistics survey of twitter.com"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:246
+msgid "Collect statistics for Google+ referer"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:256
+msgid "Turn Off or On for statistics survey of plus.google.com"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:261
+msgid "Collect statistics for Linkedin referer"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:271
+msgid "Turn Off or On for statistics survey of linkedin.com"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:274
+msgid "Pinboard"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:277
+msgid "Collect statistics for Pinterest referer"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:287
+msgid "Turn Off or On for statistics survey of pinterest.com"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:292
+msgid "Collect statistics for Scoop.it referer"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:302
+msgid "Turn Off or On for statistics survey of scoop.it"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:305
+msgid "Main China"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:308
+msgid "Collect statistics for Qzone referer"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:318
+msgid "Turn Off or On for statistics survey of qzone.qq.com"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:323
+msgid "Collect statistics for Weibo referer"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:333
+msgid "Turn Off or On for statistics survey of weibo.com"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:336
+msgid "Main Russia"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:339
+msgid "Collect statistics for vk referer"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:349
+msgid "Turn Off or On for statistics survey of vk.com"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:370
+#: pages-admin/admin-gcs.php:376
+msgid "Statistics Performances"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:382
+#: pages-admin/admin-gcs.php:388
+msgid "Statistics Organics"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:394
+#: pages-admin/admin-gcs.php:400
+msgid "Statistics Networks"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:406
+#: pages-admin/admin-gcs.php:412
+msgid "Statistics Users"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:418
+#: pages-admin/admin-gcs.php:424
+msgid "Statistics Humanized"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:830
+msgid "Normal"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:832
+msgid "Sticky"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:899
+msgid "Connected"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:900
+msgid "Disconnected"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:1114
+msgid "Known"
+msgstr ""
+
+#: pages-admin/admin-gcs.php:1116
+msgid "Unknown"
+msgstr ""
+
+#: pages-admin/admin-home.php:15
+msgid "Stats home page"
+msgstr ""
+
+#: pages-admin/admin-home.php:29
+msgid "Google chart statistics - Home statistics"
+msgstr ""
+
+#: pages-admin/admin-home.php:33
+msgid "Statistics home page total sticky VS normal"
+msgstr ""
+
+#: pages-admin/admin-home.php:90
+msgid "Currently no datas for home page"
+msgstr ""
+

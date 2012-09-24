@@ -1,0 +1,274 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gcs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-23 20:40+0100\n"
+"PO-Revision-Date: 2012-09-23 20:41+0100\n"
+"Last-Translator: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
+"Language-Team: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: google-chart-statistics.php:36
+#: pages-admin/admin-cats.php:8
+#: pages-admin/admin-gcs.php:8
+#: pages-admin/admin-home.php:8
+msgid "Sorry, but you cannot access this page directly."
+msgstr "Désolé mais vous ne pouvez pas accéder à cette page directement."
+
+#: google-chart-statistics.php:54
+msgid "Statistics"
+msgstr "Statistiques"
+
+#: google-chart-statistics.php:55
+msgid "General configuration"
+msgstr "General configuration"
+
+#: pages-admin/admin-cats.php:15
+msgid "Stats by categories"
+msgstr "Stats par catégories"
+
+#: pages-admin/admin-cats.php:29
+msgid "Google chart statistics - Categories statistics"
+msgstr "Google chart statistics - Statistiques des catégories"
+
+#: pages-admin/admin-cats.php:37
+msgid "Statistics categories most visited by all users"
+msgstr "Statistiques catégories les plus visitées - tout utilisateurs"
+
+#: pages-admin/admin-cats.php:101
+msgid "Currently no datas for categories most visited"
+msgstr "Actuellement aucune données pour les catégories les plus visitées"
+
+#: pages-admin/admin-cats.php:107
+msgid "Statistics categories most prefered by known users"
+msgstr "Statistiques catégories préférées par les utilisateurs connus"
+
+#: pages-admin/admin-cats.php:172
+msgid "Currently no datas for categories prefered by known users"
+msgstr "Actuellement, pas de données pour les catégories préférées des utilisateurs connus"
+
+#: pages-admin/admin-gcs.php:103
+msgid "Your settings have been saved"
+msgstr "Vos options ont été sauvegardées"
+
+#: pages-admin/admin-gcs.php:112
+msgid "Google chart statistics - General configuration"
+msgstr "Google chart statistics - General configuration"
+
+#: pages-admin/admin-gcs.php:116
+#: pages-admin/admin-gcs.php:355
+msgid "Save Changes"
+msgstr "Sauvegarder"
+
+#: pages-admin/admin-gcs.php:166
+msgid "Options plugin theme in dashboard"
+msgstr "Options theme du plugin dans le tableau de bord"
+
+#: pages-admin/admin-gcs.php:169
+msgid "Themify the plugin with..."
+msgstr "Themify le plugin avec..."
+
+#: pages-admin/admin-gcs.php:181
+msgid "Themify your administration (bar, buttons,...)"
+msgstr "Themify votre administration (barre, boutons,...)"
+
+#: pages-admin/admin-gcs.php:186
+msgid "Themify datas with 3D Chart"
+msgstr "Themify les données avec effet 3D Chart"
+
+#: pages-admin/admin-gcs.php:197
+msgid "Themify your visual datas with Chart 3D"
+msgstr "Themify les données visuelles avec Chart ayant un effet de bord en 3D"
+
+#: pages-admin/admin-gcs.php:201
+msgid "Options performance"
+msgstr "Options performance"
+
+#: pages-admin/admin-gcs.php:204
+msgid "Collect statistics of 1 user every..."
+msgstr "Collecter les statistiques d'1 user tout les..."
+
+#: pages-admin/admin-gcs.php:210
+msgid "Decrease request if your site has a lot of visitors. This option don't affects any others statistics and the plugin creates an accurate assessment. You may leave 1 to disable this option and hit 1/1 user. You may use left and right arrow keys on your keyboard to decrease or increase this option."
+msgstr "Diminution des requêtes si votre site a beaucoup de visiteurs. Cette option ne porte pas atteinte aux autres statistiques et le plugin crée une évaluation précise. Vous pouvez laisser 1 pour désactiver cette option et avoir 1/1 utilisateur. Vous pouvez utiliser les touches fléchées gauche et droite de votre clavier pour augmenter ou diminuer cette option."
+
+#: pages-admin/admin-gcs.php:213
+msgid "Options social networks referers"
+msgstr "Options social networks referers"
+
+#: pages-admin/admin-gcs.php:213
+msgid "World"
+msgstr "World"
+
+#: pages-admin/admin-gcs.php:216
+msgid "Collect statistics for Facebook referer"
+msgstr "Collecter les statistiques pour Facebook referer"
+
+#: pages-admin/admin-gcs.php:226
+msgid "Turn Off or On for statistics survey of facebook.com"
+msgstr "Activer ou désactiver l'enquête statistique de facebook.com"
+
+#: pages-admin/admin-gcs.php:231
+msgid "Collect statistics for Twitter referer"
+msgstr "Collecter les statistiques pour Twitter referer"
+
+#: pages-admin/admin-gcs.php:241
+msgid "Turn Off or On for statistics survey of twitter.com"
+msgstr "Activer ou désactiver l'enquête statistique de twitter.com"
+
+#: pages-admin/admin-gcs.php:246
+msgid "Collect statistics for Google+ referer"
+msgstr "Collecter les statistiques pour Google+ referer"
+
+#: pages-admin/admin-gcs.php:256
+msgid "Turn Off or On for statistics survey of plus.google.com"
+msgstr "Activer ou désactiver l'enquête statistique de plus.google.com"
+
+#: pages-admin/admin-gcs.php:261
+msgid "Collect statistics for Linkedin referer"
+msgstr "Collecter les statistiques pour Linkedin referer"
+
+#: pages-admin/admin-gcs.php:271
+msgid "Turn Off or On for statistics survey of linkedin.com"
+msgstr "Activer ou désactiver l'enquête statistique de linkedin.com"
+
+#: pages-admin/admin-gcs.php:274
+msgid "Pinboard"
+msgstr "Pinboard"
+
+#: pages-admin/admin-gcs.php:277
+msgid "Collect statistics for Pinterest referer"
+msgstr "Collecter les statistiques pour Pinterest referer"
+
+#: pages-admin/admin-gcs.php:287
+msgid "Turn Off or On for statistics survey of pinterest.com"
+msgstr "Activer ou désactiver l'enquête statistique de pinterest.com"
+
+#: pages-admin/admin-gcs.php:292
+msgid "Collect statistics for Scoop.it referer"
+msgstr "Collecter les statistiques pour Scoop.it referer"
+
+#: pages-admin/admin-gcs.php:302
+msgid "Turn Off or On for statistics survey of scoop.it"
+msgstr "Activer ou désactiver l'enquête statistique de scoop.it"
+
+#: pages-admin/admin-gcs.php:305
+msgid "Main China"
+msgstr "Main China"
+
+#: pages-admin/admin-gcs.php:308
+msgid "Collect statistics for Qzone referer"
+msgstr "Collecter les statistiques pour Qzone referer"
+
+#: pages-admin/admin-gcs.php:318
+msgid "Turn Off or On for statistics survey of qzone.qq.com"
+msgstr "Activer ou désactiver l'enquête statistique de qzone.qq.com"
+
+#: pages-admin/admin-gcs.php:323
+msgid "Collect statistics for Weibo referer"
+msgstr "Collecter les statistiques pour Weibo referer"
+
+#: pages-admin/admin-gcs.php:333
+msgid "Turn Off or On for statistics survey of weibo.com"
+msgstr "Activer ou désactiver l'enquête statistique de weibo.com"
+
+#: pages-admin/admin-gcs.php:336
+msgid "Main Russia"
+msgstr "Main Russia"
+
+#: pages-admin/admin-gcs.php:339
+msgid "Collect statistics for vk referer"
+msgstr "Collecter les statistiques pour vk referer"
+
+#: pages-admin/admin-gcs.php:349
+msgid "Turn Off or On for statistics survey of vk.com"
+msgstr "Activer ou désactiver l'enquête statistique de vk.com"
+
+#: pages-admin/admin-gcs.php:370
+#: pages-admin/admin-gcs.php:376
+msgid "Statistics Performances"
+msgstr "Statistiques Performances"
+
+#: pages-admin/admin-gcs.php:382
+#: pages-admin/admin-gcs.php:388
+msgid "Statistics Organics"
+msgstr "Statistiques Organics"
+
+#: pages-admin/admin-gcs.php:394
+#: pages-admin/admin-gcs.php:400
+msgid "Statistics Networks"
+msgstr "Statistiques Networks"
+
+#: pages-admin/admin-gcs.php:406
+#: pages-admin/admin-gcs.php:412
+msgid "Statistics Users"
+msgstr "Statistiques Users"
+
+#: pages-admin/admin-gcs.php:630
+#: pages-admin/admin-gcs.php:737
+#: pages-admin/admin-home.php:109
+#: pages-admin/admin-home.php:184
+#: pages-admin/admin-home.php:259
+msgid "Currently no datas"
+msgstr "Actuellement, pas de données"
+
+#: pages-admin/admin-gcs.php:826
+msgid "Normal"
+msgstr "Normal"
+
+#: pages-admin/admin-gcs.php:828
+msgid "Sticky"
+msgstr "Sticky"
+
+#: pages-admin/admin-gcs.php:895
+msgid "Connected"
+msgstr "Connectés"
+
+#: pages-admin/admin-gcs.php:896
+msgid "Disconnected"
+msgstr "Déconnectés"
+
+#: pages-admin/admin-gcs.php:1110
+msgid "Known"
+msgstr "Connus"
+
+#: pages-admin/admin-gcs.php:1112
+msgid "Unknown"
+msgstr "Inconnus"
+
+#: pages-admin/admin-home.php:15
+msgid "Stats home page"
+msgstr "Stats home page"
+
+#: pages-admin/admin-home.php:29
+msgid "Google chart statistics - Home statistics"
+msgstr "Google chart statistics - Statistiques Home"
+
+#: pages-admin/admin-home.php:37
+msgid "Statistics home page total sticky VS normal"
+msgstr "Statistiques home page total sticky VS total normal"
+
+#: pages-admin/admin-home.php:115
+msgid "Statistics home page from normal posts - user in bounce to"
+msgstr "Statistiques home page from normal posts - user en rebond vers"
+
+#: pages-admin/admin-home.php:190
+msgid "Statistics home page from sticky posts - user in bounce to"
+msgstr "Statistics home page from sticky posts - user en rebond vers"
+
+#~ msgid "Collect statistics for Blizzard referer"
+#~ msgstr "Collecter les statistiques pour Blizzard referer"
+
+#~ msgid "Turn Off or On for statistics survey of battle.net"
+#~ msgstr "Activer ou désactiver l'enquête statistique de battle.net"
+
+#~ msgid "Statistics Humanized"
+#~ msgstr "Statistiques Humanized"
