@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-23 20:40+0100\n"
-"PO-Revision-Date: 2012-09-23 20:41+0100\n"
+"POT-Creation-Date: 2012-09-24 16:18+0100\n"
+"PO-Revision-Date: 2012-09-24 16:19+0100\n"
 "Last-Translator: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
 "Language-Team: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
 "MIME-Version: 1.0\n"
@@ -36,8 +36,8 @@ msgid "Stats by categories"
 msgstr "Stats par catégories"
 
 #: pages-admin/admin-cats.php:29
-msgid "Google chart statistics - Categories statistics"
-msgstr "Google chart statistics - Statistiques des catégories"
+msgid "Humanized statistics - Categories statistics"
+msgstr "Humanized statistics - Statistiques des catégories"
 
 #: pages-admin/admin-cats.php:37
 msgid "Statistics categories most visited by all users"
@@ -60,8 +60,8 @@ msgid "Your settings have been saved"
 msgstr "Vos options ont été sauvegardées"
 
 #: pages-admin/admin-gcs.php:112
-msgid "Google chart statistics - General configuration"
-msgstr "Google chart statistics - General configuration"
+msgid "Humanized statistics - General configuration"
+msgstr "Humanized statistics - General configuration"
 
 #: pages-admin/admin-gcs.php:116
 #: pages-admin/admin-gcs.php:355
@@ -249,8 +249,8 @@ msgid "Stats home page"
 msgstr "Stats home page"
 
 #: pages-admin/admin-home.php:29
-msgid "Google chart statistics - Home statistics"
-msgstr "Google chart statistics - Statistiques Home"
+msgid "Humanized statistics - Home statistics"
+msgstr "Humanized statistics - Statistiques Home"
 
 #: pages-admin/admin-home.php:37
 msgid "Statistics home page total sticky VS normal"

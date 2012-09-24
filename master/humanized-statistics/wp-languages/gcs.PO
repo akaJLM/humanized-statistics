@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-23 20:40+0100\n"
-"PO-Revision-Date: 2012-09-23 20:40+0100\n"
+"POT-Creation-Date: 2012-09-24 16:18+0100\n"
+"PO-Revision-Date: 2012-09-24 16:18+0100\n"
 "Last-Translator: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
 "Language-Team: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgid "Stats by categories"
 msgstr ""
 
 #: pages-admin/admin-cats.php:29
-msgid "Google chart statistics - Categories statistics"
+msgid "Humanized statistics - Categories statistics"
 msgstr ""
 
 #: pages-admin/admin-cats.php:37
@@ -60,7 +60,7 @@ msgid "Your settings have been saved"
 msgstr ""
 
 #: pages-admin/admin-gcs.php:112
-msgid "Google chart statistics - General configuration"
+msgid "Humanized statistics - General configuration"
 msgstr ""
 
 #: pages-admin/admin-gcs.php:116
@@ -249,7 +249,7 @@ msgid "Stats home page"
 msgstr ""
 
 #: pages-admin/admin-home.php:29
-msgid "Google chart statistics - Home statistics"
+msgid "Humanized statistics - Home statistics"
 msgstr ""
 
 #: pages-admin/admin-home.php:37
