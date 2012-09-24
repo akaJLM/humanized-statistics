@@ -10,7 +10,7 @@ Recolt datas by post and page with post_meta and display it with the Api Google 
 
 == Description ==
 
-Recolt datas by post with post_meta and display it with the Api Google chart statistics on each post and page in your administration. 2 pages admin exists for home page and by categories in dashboard > statistics menu
+Recolt datas by post with post_meta and display it with the Api Google chart statistics on each post and page in your administration. 2 pages admin exists for home page and by categories in dashboard > statistics menu but these pages work with simple addition of post_meta and only directly displaying in administration (no recolted datas for home page and categories).
 
 In the futur, maybe the plugin creates some humanized and dynamics things (like - by user - "yours prefered categories", "you most visited categories" and some other kinds of this kind of things in some widgets). Also task crons to make comparison. Some of this kind of build is already under construction.
 
