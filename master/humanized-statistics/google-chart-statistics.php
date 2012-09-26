@@ -211,6 +211,8 @@ function gcs_filter_statistics($content)
 		
 		$mule = get_option('gcs_request_divisor');
 		
+		$userlog = is_user_logged_in();
+		
 		if(!$mule)
 		$mule = 1;
 		
@@ -239,7 +241,7 @@ function gcs_filter_statistics($content)
 			$browser_language = getDefaultLanguage();
 			
 			//Filter IP and Total known visitors statistics + known users by browser languages
-			if(is_user_logged_in())
+			if($userlog)
 			{
 				$user_ip = get_user_meta($user_ID, 'gcs_ip', true);
 	
@@ -269,7 +271,7 @@ function gcs_filter_statistics($content)
 			}
 			
 			//Total unknown visitors statistics + unknown users by browser languages
-			if(!is_user_logged_in())
+			if(!$userlog)
 			{
 				$verif_ip = $wpdb->get_results($wpdb->prepare("SELECT * FROM $wpdb->usermeta WHERE meta_key='gcs_ip' AND meta_value=%s", $userip));
 				//Unknow user
@@ -483,7 +485,7 @@ function gcs_filter_statistics($content)
 		}
 		
 		//Update user meta prefered categories
-		if($cat)
+		if($userlog && $cat)
 		{
 			$count = 0;
 			$count = get_user_meta($user_ID, 'gcs_cat_'.$blog_id.'_'.$cat.'', true);
