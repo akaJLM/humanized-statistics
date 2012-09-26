@@ -4,7 +4,7 @@ Plugin Name: Humanized statistics
 Plugin URI: http://kwark.allwebtuts.net
 Description: Statistics for wordpress by posts, by pages and for home page (sticky posts vs normal posts), and by categories
 Author: Laurent (KwarK) Bertrand
-Version: 0.1
+Version: 0.2
 Author URI: http://kwark.allwebtuts.net
 */
 
@@ -204,7 +204,10 @@ function gcs_filter_statistics($content)
 {
 	if(!is_home() && !is_front_page())
 	{
-		global $id;
+		global $id, $user_ID, $blog_id, $wpdb;
+		
+		$category = get_the_category();
+		$cat = $category[0]->term_id;
 		
 		$mule = get_option('gcs_request_divisor');
 		
@@ -224,7 +227,7 @@ function gcs_filter_statistics($content)
 		
 		if(is_int($counter)) //To make sur if gcs_hit > (int) 1... (after a php warning, or others problems)
 		{
-			global $user_ID, $blog_id, $is_iphone, $is_chrome, $is_safari, $is_NS4, $is_opera, $is_macIE, $is_winIE, $is_gecko, $is_lynx, $is_IE;
+			global $is_iphone, $is_chrome, $is_safari, $is_NS4, $is_opera, $is_macIE, $is_winIE, $is_gecko, $is_lynx, $is_IE;
 			//Get all meta (one request)
 			$gcs = get_post_meta($id);
 
@@ -263,27 +266,11 @@ function gcs_filter_statistics($content)
 					$up = $count + $mule;
 					update_post_meta($id, 'gcs_total_known_'.$browser_language.'', $up);
 				}
-				
-				//Update user meta prefered categories
-				$category = get_the_category();
-				$cat = $category[0]->term_id;
-				
-				if($cat)
-				{
-					//!\Here it's user_meta!
-					$count = 0;
-					$count = get_user_meta($user_ID, 'gcs_cat_'.$blog_id.'_'.$cat.'', true);
-					
-					$up = $count + $mule;
-					update_user_meta($user_ID, 'gcs_cat_'.$blog_id.'_'.$cat.'', $up);
-				}
 			}
 			
 			//Total unknown visitors statistics + unknown users by browser languages
 			if(!is_user_logged_in())
 			{
-				global $wpdb;
-				
 				$verif_ip = $wpdb->get_results($wpdb->prepare("SELECT * FROM $wpdb->usermeta WHERE meta_key='gcs_ip' AND meta_value=%s", $userip));
 				//Unknow user
 				if(!$verif_ip)
@@ -418,10 +405,6 @@ function gcs_filter_statistics($content)
 				}
 			}
 			
-			//Update post meta total by categories
-			$category = get_the_category();
-			$cat = $category[0]->term_id;
-			
 			if($cat)
 			{
 				$count = 0;
@@ -498,6 +481,17 @@ function gcs_filter_statistics($content)
 				update_post_meta($id, 'gcs_geoip_'.$country.'', $up);
 			}*/
 		}
+		
+		//Update user meta prefered categories
+		if($cat)
+		{
+			$count = 0;
+			$count = get_user_meta($user_ID, 'gcs_cat_'.$blog_id.'_'.$cat.'', true);
+			
+			$up = $count + 1;
+			update_user_meta($user_ID, 'gcs_cat_'.$blog_id.'_'.$cat.'', $up);
+		}
+		
 		//ONLY HERE FOR PERFORMANCE TEST ON LOCALHOST - LEAVE COMMENTED
 		/*$after = (float)preg_replace('#,#', '.', timer_stop(0));*/
 		
