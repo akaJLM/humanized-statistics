@@ -4,22 +4,19 @@ Contributors: KwarK
 Donate link: http://kwark.allwebtuts.net/
 Tags: statistics users, statistics by page, statistics by categories, statistics for home page, wordpress plugin, Google chart tools, Api google Chart
 Tested up to: 3.4.2
-Stable tag: 0.3
+Stable tag: 0.4
 
 Recolt datas by post and page with post_meta and display it with the Api Google chart on each post and page
 
 == Description ==
 
-Recolt datas by post with post_meta and display it with the Api Google chart on each post and page in your administration. 2 pages admin exists for home page and by categories in dashboard > statistics menu but these pages work with simple addition of post_meta and only directly displaying in administration (no recolted datas for home page and categories).
+Recolt datas by post with post_meta and display it with the Api Google chart on each post and page in your administration. 2 pages admin exists for home page and by categories in dashboard > statistics menu. These pages work with simple addition of post_meta and only directly displaying in administration (no recolted datas for home page and categories on front end).
 
-If you don't view the meta box under each post and page, open one post and one page and in the right corner hit "screen options". Select the meta boxes from the plugin.
+If you don't view the meta box under each post and page, open one post and one page and in the top-right corner hit "screen options". Select the meta boxes from the plugin.
 
-In the futur, maybe the plugin creates some humanized and dynamics things (like - by user - "your prefered categories", "your visited categories" and some other kinds of this kind of things in some widgets). Also cron task to create survey by post/by page to make comparison. Also one option for adding personal referers. Some resetting option. Some of this kind of build is already under construction.
+In the futur, maybe the plugin creates some humanized and dynamics things (like - by user - "your prefered categories",...) because the plugin recolts datas to make that. Also cron task to create survey by post/by page to make comparison. Also one option for adding personal referers. Some manual and automatic resetting option. Some of this kind of build is already under construction.
 
-Currently, the plugin requests only if is not your home page and the time to creates all the datas is ~250 ms. The plugin have an option to decrease request by user like 1/2 or 1/5 or 1/10 users, etc...
-
-I think ~250ms it is too much. When my skill is up to date too with other technical with wordpress I will make some update.
-If it's difficult to decrease these 250ms, The solution profitable for these 250ms is to create more result in administration, more dynamics widgets and more comparison with more survey option (by cron task) to make profitable these 250ms of loading time.
+The plugin have an option to decrease request by user like 1/2 or 1/5 or 1/10 users, etc...
 
 == Installation ==
 
@@ -44,6 +41,12 @@ View forum support on Wordpress for more information
 
 
 == Changelog ==
+
+= 0.4 =
+
+* Performance improvement.
+* Added option personal referers.
+* Added manual reset options.
 
 = 0.3 =
 
