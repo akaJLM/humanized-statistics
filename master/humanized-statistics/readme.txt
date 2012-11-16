@@ -4,7 +4,7 @@ Contributors: KwarK
 Donate link: http://kwark.allwebtuts.net/
 Tags: statistics users, statistics by page, statistics by categories, statistics for home page, wordpress plugin, Google chart tools, Api google Chart
 Tested up to: 3.4.2
-Stable tag: 0.4
+Stable tag: 0.5
 
 Recolt datas by post and page with post_meta and display it with the Api Google chart on each post and page
 
@@ -41,6 +41,10 @@ View forum support on Wordpress for more information
 
 
 == Changelog ==
+
+= 0.5 =
+
+* Bug correction where the datas collection was stopped.
 
 = 0.4 =
 

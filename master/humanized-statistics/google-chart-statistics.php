@@ -4,7 +4,7 @@ Plugin Name: Humanized statistics
 Plugin URI: http://kwark.allwebtuts.net
 Description: Statistics for wordpress by posts, by pages and for home page (sticky posts vs normal posts), and by categories
 Author: Laurent (KwarK) Bertrand
-Version: 0.4
+Version: 0.5
 Author URI: http://kwark.allwebtuts.net
 */
 
@@ -198,7 +198,9 @@ function gcs_ip()
 
 
 //Main function for all statistics collector
-if(!is_admin())
+add_filter('the_content', 'gcs_recolt_datas');
+
+function gcs_recolt_datas($content)
 {
 	if(is_single() || is_page())
 	{
@@ -481,5 +483,6 @@ if(!is_admin())
 			update_user_meta($user_ID, 'gcs_cat_'.$blog_id.'_'.$cat.'', $up);
 		}
 	}
+	return $content;
 }
 ?>
