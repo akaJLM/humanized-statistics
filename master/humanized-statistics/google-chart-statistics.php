@@ -4,7 +4,7 @@ Plugin Name: Humanized statistics
 Plugin URI: http://kwark.allwebtuts.net
 Description: Statistics for wordpress by posts, by pages and for home page (sticky posts vs normal posts), and by categories
 Author: Laurent (KwarK) Bertrand
-Version: 0.5
+Version: 0.2
 Author URI: http://kwark.allwebtuts.net
 */
 
@@ -198,11 +198,11 @@ function gcs_ip()
 
 
 //Main function for all statistics collector
-add_filter('the_content', 'gcs_recolt_datas');
+add_filter('the_content', 'gcs_filter_statistics');
 
-function gcs_recolt_datas($content)
+function gcs_filter_statistics($content)
 {
-	if(is_single() || is_page())
+	if(!is_home() && !is_front_page())
 	{
 		global $id, $user_ID, $blog_id, $wpdb;
 		
@@ -224,10 +224,12 @@ function gcs_recolt_datas($content)
 		
 		$counter = $hit / $mule;
 		
+		//ONLY HERE FOR PERFORMANCE TEST ON LOCALHOST - LEAVE COMMENTED
+		/*$before = (float)preg_replace('#,#', '.', timer_stop(0));*/
+		
 		if(is_int($counter)) //To make sur if gcs_hit > (int) 1... (after a php warning, or others problems)
 		{
 			global $is_iphone, $is_chrome, $is_safari, $is_NS4, $is_opera, $is_macIE, $is_winIE, $is_gecko, $is_lynx, $is_IE;
-			
 			//Get all meta (one request)
 			$gcs = get_post_meta($id);
 
@@ -335,34 +337,29 @@ function gcs_recolt_datas($content)
 				
 				//host name + extension
 				$referer_full = preg_replace('#www\.#', '', $from);
+				/*var_dump($referer_full);*/
 				
 				//Update by social referers
 				$socials = get_option('gcs_social');
 				$temp = explode(',', $socials);
 				
-				$site_url = get_bloginfo('wpurl');
-				
-				if($referer != $site_url)
+				foreach($temp as $dom)
 				{
-					foreach($temp as $dom)
+					if($dom == $referer_full)
 					{
-						if($dom == $referer_full)
-						{
-							//host name
-							$referer_name = preg_replace('#\.#', '_', $referer_full);
-							
-							$count = 0;
-							$count = $gcs['gcs_social-'.$referer_name.''][0];
-							
-							$up = $count + $mule;
-							update_post_meta($id, 'gcs_social-'.$referer_name.'', $up);
-							
-							break;
-						}
+						//host name
+						$referer_name = preg_replace('#\.#', '_', $referer_full);
+						/*var_dump($referer_name);*/
+						$count = 0;
+						$count = $gcs['gcs_social-'.$referer_name.''][0];
+						
+						$up = $count + $mule;
+						update_post_meta($id, 'gcs_social-'.$referer_name.'', $up);
 					}
 				}
-				
+			
 				//Update internal referer
+				$site_url = get_bloginfo('wpurl');
 				$internal_dom = preg_replace('#http://|https://|/$#', '', $site_url);
 				$current_url = preg_replace('#/$#', '', get_permalink());
 			
@@ -469,8 +466,22 @@ function gcs_recolt_datas($content)
 				}
 				$up = timer_stop(0);
 				
-				update_post_meta($id, 'gcs_total_loadtime_when_'.$navigator.'', $up);
+				if($up < $count)
+				{
+					update_post_meta($id, 'gcs_total_loadtime_when_'.$navigator.'', $up);
+				}
 			}
+			//Update visitors by countries (LEAVE COMMENTED! GEOIP php extension needed! Chart for countries currently not builded!)
+			/*$country = geoip_country_name_by_name($userip);
+			if ($country)
+			{
+				$country = preg_replace(array('# #', '#%20#'), array('_', '_'), strtolower($country));
+				$count = 0;
+				$count = get_post_meta($id, 'gcs_geoip_'.$country.'', true);
+				
+				$up = $count + $mule;
+				update_post_meta($id, 'gcs_geoip_'.$country.'', $up);
+			}*/
 		}
 		
 		//Update user meta prefered categories
@@ -482,7 +493,13 @@ function gcs_recolt_datas($content)
 			$up = $count + 1;
 			update_user_meta($user_ID, 'gcs_cat_'.$blog_id.'_'.$cat.'', $up);
 		}
+		
+		//ONLY HERE FOR PERFORMANCE TEST ON LOCALHOST - LEAVE COMMENTED
+		/*$after = (float)preg_replace('#,#', '.', timer_stop(0));*/
+		
 	}
+	//ONLY HERE FOR PERFORMANCE TEST ON LOCALHOST - LEAVE COMMENTED
+	/*echo $after - $before . ' seconde';*/
 	return $content;
-}
+}//END main function statistics collector
 ?>

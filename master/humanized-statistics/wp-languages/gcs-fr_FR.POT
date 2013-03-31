@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gcs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-04 12:54+0100\n"
-"PO-Revision-Date: 2012-11-04 12:59+0100\n"
+"POT-Creation-Date: 2012-08-20 20:31+0100\n"
+"PO-Revision-Date: 2012-08-20 20:33+0100\n"
 "Last-Translator: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
 "Language-Team: Laurent (KwarK) Bertrand <kwark@allwebtuts.net>\n"
 "MIME-Version: 1.0\n"
@@ -16,18 +16,18 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: google-chart-statistics.php:36
+#: google-chart-statistics.php:18
 #: pages-admin/admin-cats.php:8
 #: pages-admin/admin-gcs.php:8
 #: pages-admin/admin-home.php:8
 msgid "Sorry, but you cannot access this page directly."
-msgstr "Désolé mais vous ne pouvez pas accéder à cette page directement."
+msgstr "Désolé, mais vous ne pouvez pas accéder à cette page directement."
 
-#: google-chart-statistics.php:51
+#: google-chart-statistics.php:35
 msgid "Statistics"
 msgstr "Statistiques"
 
-#: google-chart-statistics.php:52
+#: google-chart-statistics.php:36
 msgid "General configuration"
 msgstr "General configuration"
 
@@ -36,267 +36,208 @@ msgid "Stats by categories"
 msgstr "Stats par catégories"
 
 #: pages-admin/admin-cats.php:29
-msgid "Humanized statistics - Categories statistics"
-msgstr "Humanized statistics - Statistiques des catégories"
+msgid "Google chart statistics - Categories statistics"
+msgstr "Google chart statistics - Categories statistics"
 
-#: pages-admin/admin-cats.php:37
+#: pages-admin/admin-cats.php:33
 msgid "Statistics categories most visited by all users"
-msgstr "Statistiques catégories les plus visitées - tout utilisateurs"
+msgstr "Statistiques catégories plus visitées par tous les utilisateurs"
 
-#: pages-admin/admin-cats.php:101
+#: pages-admin/admin-cats.php:90
 msgid "Currently no datas for categories most visited"
-msgstr "Actuellement aucune données pour les catégories les plus visitées"
+msgstr "Actuellement, aucune données pour les catégories les plus visitées"
 
-#: pages-admin/admin-cats.php:107
+#: pages-admin/admin-cats.php:96
 msgid "Statistics categories most prefered by known users"
-msgstr "Statistiques catégories préférées par les utilisateurs connus"
+msgstr "Statistiques catégories préférées par utilisateurs connus"
 
-#: pages-admin/admin-cats.php:172
+#: pages-admin/admin-cats.php:158
 msgid "Currently no datas for categories prefered by known users"
 msgstr "Actuellement, pas de données pour les catégories préférées des utilisateurs connus"
 
-#: pages-admin/admin-gcs.php:133
-msgid "Posts and pages statistics have been resetted"
-msgstr "Les statistiques articles et pages ont été remis à zéro"
-
-#: pages-admin/admin-gcs.php:144
-msgid "Users statistics have been resetted"
-msgstr "Users statistiques ont été remise à zéro"
-
-#: pages-admin/admin-gcs.php:149
+#: pages-admin/admin-gcs.php:103
 msgid "Your settings have been saved"
 msgstr "Vos options ont été sauvegardées"
 
-#: pages-admin/admin-gcs.php:158
-msgid "Humanized statistics - General configuration"
-msgstr "Humanized statistics - General configuration"
+#: pages-admin/admin-gcs.php:112
+msgid "Google chart statistics - General configuration"
+msgstr "Google chart statistics - General configuration"
 
-#: pages-admin/admin-gcs.php:162
-#: pages-admin/admin-gcs.php:509
+#: pages-admin/admin-gcs.php:116
+#: pages-admin/admin-gcs.php:355
 msgid "Save Changes"
 msgstr "Sauvegarder"
 
-#: pages-admin/admin-gcs.php:229
+#: pages-admin/admin-gcs.php:166
 msgid "Options plugin theme in dashboard"
-msgstr "Options theme du plugin dans le tableau de bord"
+msgstr "Options plugin theme dans le tableau de bord"
 
-#: pages-admin/admin-gcs.php:232
+#: pages-admin/admin-gcs.php:169
 msgid "Themify the plugin with..."
 msgstr "Themify le plugin avec..."
 
-#: pages-admin/admin-gcs.php:244
+#: pages-admin/admin-gcs.php:181
 msgid "Themify your administration (bar, buttons,...)"
 msgstr "Themify votre administration (barre, boutons,...)"
 
-#: pages-admin/admin-gcs.php:249
+#: pages-admin/admin-gcs.php:186
 msgid "Themify datas with 3D Chart"
-msgstr "Themify les données avec effet 3D Chart"
+msgstr "Themify datas avec 3D Chart"
 
-#: pages-admin/admin-gcs.php:260
+#: pages-admin/admin-gcs.php:197
 msgid "Themify your visual datas with Chart 3D"
-msgstr "Themify les données visuelles avec Chart ayant un effet de bord en 3D"
+msgstr "Themify les données visuel avec Chart en 3D"
 
-#: pages-admin/admin-gcs.php:264
+#: pages-admin/admin-gcs.php:201
 msgid "Options performance"
 msgstr "Options performance"
 
-#: pages-admin/admin-gcs.php:267
+#: pages-admin/admin-gcs.php:204
 msgid "Collect statistics of 1 user every..."
 msgstr "Collecter les statistiques d'1 user tout les..."
 
-#: pages-admin/admin-gcs.php:273
+#: pages-admin/admin-gcs.php:210
 msgid "Decrease request if your site has a lot of visitors. This option don't affects any others statistics and the plugin creates an accurate assessment. You may leave 1 to disable this option and hit 1/1 user. You may use left and right arrow keys on your keyboard to decrease or increase this option."
 msgstr "Diminution des requêtes si votre site a beaucoup de visiteurs. Cette option ne porte pas atteinte aux autres statistiques et le plugin crée une évaluation précise. Vous pouvez laisser 1 pour désactiver cette option et avoir 1/1 utilisateur. Vous pouvez utiliser les touches fléchées gauche et droite de votre clavier pour augmenter ou diminuer cette option."
 
-#: pages-admin/admin-gcs.php:276
+#: pages-admin/admin-gcs.php:213
 msgid "Options social networks referers"
 msgstr "Options social networks referers"
 
-#: pages-admin/admin-gcs.php:276
+#: pages-admin/admin-gcs.php:213
 msgid "World"
 msgstr "World"
 
-#: pages-admin/admin-gcs.php:279
+#: pages-admin/admin-gcs.php:216
 msgid "Collect statistics for Facebook referer"
 msgstr "Collecter les statistiques pour Facebook referer"
 
-#: pages-admin/admin-gcs.php:289
+#: pages-admin/admin-gcs.php:226
 msgid "Turn Off or On for statistics survey of facebook.com"
 msgstr "Activer ou désactiver l'enquête statistique de facebook.com"
 
-#: pages-admin/admin-gcs.php:294
+#: pages-admin/admin-gcs.php:231
 msgid "Collect statistics for Twitter referer"
 msgstr "Collecter les statistiques pour Twitter referer"
 
-#: pages-admin/admin-gcs.php:304
+#: pages-admin/admin-gcs.php:241
 msgid "Turn Off or On for statistics survey of twitter.com"
 msgstr "Activer ou désactiver l'enquête statistique de twitter.com"
 
-#: pages-admin/admin-gcs.php:309
+#: pages-admin/admin-gcs.php:246
 msgid "Collect statistics for Google+ referer"
 msgstr "Collecter les statistiques pour Google+ referer"
 
-#: pages-admin/admin-gcs.php:319
+#: pages-admin/admin-gcs.php:256
 msgid "Turn Off or On for statistics survey of plus.google.com"
 msgstr "Activer ou désactiver l'enquête statistique de plus.google.com"
 
-#: pages-admin/admin-gcs.php:324
+#: pages-admin/admin-gcs.php:261
 msgid "Collect statistics for Linkedin referer"
 msgstr "Collecter les statistiques pour Linkedin referer"
 
-#: pages-admin/admin-gcs.php:334
+#: pages-admin/admin-gcs.php:271
 msgid "Turn Off or On for statistics survey of linkedin.com"
 msgstr "Activer ou désactiver l'enquête statistique de linkedin.com"
 
-#: pages-admin/admin-gcs.php:337
+#: pages-admin/admin-gcs.php:274
 msgid "Pinboard"
 msgstr "Pinboard"
 
-#: pages-admin/admin-gcs.php:340
+#: pages-admin/admin-gcs.php:277
 msgid "Collect statistics for Pinterest referer"
 msgstr "Collecter les statistiques pour Pinterest referer"
 
-#: pages-admin/admin-gcs.php:350
+#: pages-admin/admin-gcs.php:287
 msgid "Turn Off or On for statistics survey of pinterest.com"
 msgstr "Activer ou désactiver l'enquête statistique de pinterest.com"
 
-#: pages-admin/admin-gcs.php:355
+#: pages-admin/admin-gcs.php:292
 msgid "Collect statistics for Scoop.it referer"
 msgstr "Collecter les statistiques pour Scoop.it referer"
 
-#: pages-admin/admin-gcs.php:365
+#: pages-admin/admin-gcs.php:302
 msgid "Turn Off or On for statistics survey of scoop.it"
 msgstr "Activer ou désactiver l'enquête statistique de scoop.it"
 
-#: pages-admin/admin-gcs.php:368
+#: pages-admin/admin-gcs.php:305
 msgid "Main China"
 msgstr "Main China"
 
-#: pages-admin/admin-gcs.php:371
+#: pages-admin/admin-gcs.php:308
 msgid "Collect statistics for Qzone referer"
 msgstr "Collecter les statistiques pour Qzone referer"
 
-#: pages-admin/admin-gcs.php:381
+#: pages-admin/admin-gcs.php:318
 msgid "Turn Off or On for statistics survey of qzone.qq.com"
 msgstr "Activer ou désactiver l'enquête statistique de qzone.qq.com"
 
-#: pages-admin/admin-gcs.php:386
+#: pages-admin/admin-gcs.php:323
 msgid "Collect statistics for Weibo referer"
 msgstr "Collecter les statistiques pour Weibo referer"
 
-#: pages-admin/admin-gcs.php:396
+#: pages-admin/admin-gcs.php:333
 msgid "Turn Off or On for statistics survey of weibo.com"
 msgstr "Activer ou désactiver l'enquête statistique de weibo.com"
 
-#: pages-admin/admin-gcs.php:399
+#: pages-admin/admin-gcs.php:336
 msgid "Main Russia"
 msgstr "Main Russia"
 
-#: pages-admin/admin-gcs.php:402
+#: pages-admin/admin-gcs.php:339
 msgid "Collect statistics for vk referer"
 msgstr "Collecter les statistiques pour vk referer"
 
-#: pages-admin/admin-gcs.php:412
+#: pages-admin/admin-gcs.php:349
 msgid "Turn Off or On for statistics survey of vk.com"
 msgstr "Activer ou désactiver l'enquête statistique de vk.com"
 
-#: pages-admin/admin-gcs.php:416
-msgid "Personal referers"
-msgstr "Personal referers"
-
-#: pages-admin/admin-gcs.php:419
-msgid "Your personal referers"
-msgstr "Vos personal referers"
-
-#: pages-admin/admin-gcs.php:428
-msgid "Add your personal referer seperate by coma (Add only domain.tld without http://www.)"
-msgstr "Ajoutez vos referer personnel séparé par une virgule (Ajouter seulement domain.tld sans http://www.)"
-
-#: pages-admin/admin-gcs.php:450
-msgid "Please decrease your personal active referers or replace some oldest by newest for performance purpose (personal referers active in same time must be < or = to 5 to have already good site performance)"
-msgstr "Merci de diminuer vos referers personnel actif ou de remplacer certains anciens par des nouveaux pour des raisons de performance (referers actif personnel en même temps doit être < ou = à 5 pour avoir un site performant)"
-
-#: pages-admin/admin-gcs.php:457
-msgid "Collect statistics for"
-msgstr "Collecter les statistiques pour"
-
-#: pages-admin/admin-gcs.php:457
-msgid "referer"
-msgstr "referer"
-
-#: pages-admin/admin-gcs.php:471
-msgid "Turn Off or On for statistics survey of"
-msgstr "Activer ou désactiver l'enquête statistique de"
-
-#: pages-admin/admin-gcs.php:477
-msgid "Reset Options"
-msgstr "Reset Options"
-
-#: pages-admin/admin-gcs.php:480
-msgid "Reset posts and pages statistics"
-msgstr "Reset articles et pages statistiques"
-
-#: pages-admin/admin-gcs.php:489
-msgid "Turn On to reset all statistics to zero on all posts and pages stats"
-msgstr "Turn On pour reset toutes les statistiques à zéro sur tous les articles et pages"
-
-#: pages-admin/admin-gcs.php:494
-msgid "Reset users statistics"
-msgstr "Reset users statistiques"
-
-#: pages-admin/admin-gcs.php:503
-msgid "Turn On to reset all statistics to zero for all users stats"
-msgstr "Turn On pour reset toutes les statistiques à zéro pour tous les utilisateurs"
-
-#: pages-admin/admin-gcs.php:524
-#: pages-admin/admin-gcs.php:530
+#: pages-admin/admin-gcs.php:370
+#: pages-admin/admin-gcs.php:376
 msgid "Statistics Performances"
 msgstr "Statistiques Performances"
 
-#: pages-admin/admin-gcs.php:536
-#: pages-admin/admin-gcs.php:542
+#: pages-admin/admin-gcs.php:382
+#: pages-admin/admin-gcs.php:388
 msgid "Statistics Organics"
 msgstr "Statistiques Organics"
 
-#: pages-admin/admin-gcs.php:548
-#: pages-admin/admin-gcs.php:554
+#: pages-admin/admin-gcs.php:394
+#: pages-admin/admin-gcs.php:400
 msgid "Statistics Networks"
 msgstr "Statistiques Networks"
 
-#: pages-admin/admin-gcs.php:560
-#: pages-admin/admin-gcs.php:566
+#: pages-admin/admin-gcs.php:406
+#: pages-admin/admin-gcs.php:412
 msgid "Statistics Users"
 msgstr "Statistiques Users"
 
-#: pages-admin/admin-gcs.php:784
-#: pages-admin/admin-gcs.php:891
-#: pages-admin/admin-home.php:109
-#: pages-admin/admin-home.php:184
-#: pages-admin/admin-home.php:259
-msgid "Currently no datas"
-msgstr "Actuellement, pas de données"
+#: pages-admin/admin-gcs.php:418
+#: pages-admin/admin-gcs.php:424
+msgid "Statistics Humanized"
+msgstr "Statistiques Humanized"
 
-#: pages-admin/admin-gcs.php:980
+#: pages-admin/admin-gcs.php:830
 msgid "Normal"
 msgstr "Normal"
 
-#: pages-admin/admin-gcs.php:982
+#: pages-admin/admin-gcs.php:832
 msgid "Sticky"
 msgstr "Sticky"
 
-#: pages-admin/admin-gcs.php:1049
+#: pages-admin/admin-gcs.php:899
 msgid "Connected"
 msgstr "Connectés"
 
-#: pages-admin/admin-gcs.php:1050
+#: pages-admin/admin-gcs.php:900
 msgid "Disconnected"
-msgstr "Déconnectés"
+msgstr "Disconnectés"
 
-#: pages-admin/admin-gcs.php:1264
+#: pages-admin/admin-gcs.php:1114
 msgid "Known"
 msgstr "Connus"
 
-#: pages-admin/admin-gcs.php:1266
+#: pages-admin/admin-gcs.php:1116
 msgid "Unknown"
 msgstr "Inconnus"
 
@@ -305,26 +246,14 @@ msgid "Stats home page"
 msgstr "Stats home page"
 
 #: pages-admin/admin-home.php:29
-msgid "Humanized statistics - Home statistics"
-msgstr "Humanized statistics - Statistiques Home"
+msgid "Google chart statistics - Home statistics"
+msgstr "Google chart statistics - Statistiques Home"
 
-#: pages-admin/admin-home.php:37
+#: pages-admin/admin-home.php:33
 msgid "Statistics home page total sticky VS normal"
-msgstr "Statistiques home page total sticky VS total normal"
+msgstr "Statistiques home page total sticky VS normal"
 
-#: pages-admin/admin-home.php:115
-msgid "Statistics home page from normal posts - user in bounce to"
-msgstr "Statistiques home page from normal posts - user en rebond vers"
+#: pages-admin/admin-home.php:90
+msgid "Currently no datas for home page"
+msgstr "Actuellement, pas de données pour la home page"
 
-#: pages-admin/admin-home.php:190
-msgid "Statistics home page from sticky posts - user in bounce to"
-msgstr "Statistics home page from sticky posts - user en rebond vers"
-
-#~ msgid "Collect statistics for Blizzard referer"
-#~ msgstr "Collecter les statistiques pour Blizzard referer"
-
-#~ msgid "Turn Off or On for statistics survey of battle.net"
-#~ msgstr "Activer ou désactiver l'enquête statistique de battle.net"
-
-#~ msgid "Statistics Humanized"
-#~ msgstr "Statistiques Humanized"

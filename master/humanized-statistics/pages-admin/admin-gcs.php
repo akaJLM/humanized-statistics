@@ -31,8 +31,6 @@ function gcs_do_admin_page()
 {
 	if(isset($_POST['submitted']) && $_POST['submitted'] == "yes")
 	{
-		global $wpdb;
-		
 		//Requests divisor
 		$gcs_request_divisor = stripslashes($_POST['gcs_request_divisor']);
 		
@@ -78,9 +76,6 @@ function gcs_do_admin_page()
 		$vk_referer = stripslashes($_POST['vk_referer']);
 		update_option('vk_referer', $vk_referer);
 		
-		$gcs_personal_referers = stripslashes($_POST['gcs_personal_referers']);
-		update_option('gcs_personal_referers', $gcs_personal_referers);
-		
 		//Construct referers
 		$temp = array();
 		$temp[] = get_option('facebook_referer');
@@ -96,53 +91,12 @@ function gcs_do_admin_page()
 		
 		$temp[] = get_option('vk_referer');
 		
-		$other_referers = get_option('gcs_personal_referers'); 
-		
-		if($other_referers)
-		{
-			$other_referers = explode(',', $other_referers);
-			
-			foreach($other_referers as $ref)
-			{
-				//var_dump($ref);
-				$ref_str = preg_replace(array('#www\.#', '#\.(.+)#'), array('', ''),  $ref);
-				
-				$personal_referer = stripslashes($_POST['' . $ref_str . '_referer']);
-				
-				update_option('' . $ref_str . '_referer', $personal_referer);
-				
-				$temp[] = get_option('' . $ref_str . '_referer');
-			}
-		}
-		
 		if($temp)
 		{
 			$gcs_social = implode(',', array_filter($temp));
 			update_option('gcs_social', $gcs_social);
 			
-			//var_dump($gcs_social);
-		}
-		
-		$reset_datas = stripslashes($_POST['resetpostspages']);
-		
-		if($reset_datas == 'on')
-		{
-			$meta_key = 'gcs_%';
-			$datas = $wpdb->query($wpdb->prepare("DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '%s'", $meta_key));
-			echo '<div id="message" class="updated fade"><p><strong>';
-			_e('Posts and pages statistics have been resetted', 'gcs');
-			echo '.</strong></p></div>';
-		}
-		
-		$reset_users = stripslashes($_POST['resetusers']);
-		
-		if($reset_users == 'on')
-		{
-			$meta_key = 'gcs_%';
-			$users = $wpdb->query($wpdb->prepare("DELETE FROM $wpdb->usermeta WHERE meta_key LIKE '%s'", $meta_key));
-			echo '<div id="message" class="updated fade"><p><strong>';
-			_e('Users statistics have been resetted', 'gcs');
-			echo '.</strong></p></div>';
+			/*var_dump($gcs_social);*/
 		}
 		
 		echo '<div id="message" class="updated fade"><p><strong>';
@@ -219,10 +173,6 @@ function gcs_do_admin_page()
 			
 			//Main Russia
 			$("#vk").buttonset();
-			
-			//Reset options
-			$("#resetpostspages").buttonset();
-			$("#resetusers").buttonset();
 		});
 		</script>
         <table class="widefat options" style="width: 650px">
@@ -241,7 +191,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row"></td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Themify your administration (bar, buttons,...)', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Themify your administration (bar, buttons,...)', 'gcs'); ?>"></span>
           </td>
 	  </tr>
       <tr valign="top">
@@ -257,7 +207,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row"></td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Themify your visual datas with Chart 3D', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Themify your visual datas with Chart 3D', 'gcs'); ?>"></span>
         </td>
 	  </tr>
       </table><br /><table class="widefat options" style="width: 650px">
@@ -270,7 +220,7 @@ function gcs_do_admin_page()
 			<div style="margin:5px; width:150px" id="gcs_divisor_slider"></div>
         </td>
 		<td scope="row"><input type="text" id="gcs_request_divisor" name="gcs_request_divisor" style="border:0; cursor:default; opacity:0.5; color: #0078AE; font-weight:bold; text-shadow:0.1em 0.1em #77D5F7;" /></td>
-         <td scope="row"><span class="gcs_help" title="<?php _e('Decrease request if your site has a lot of visitors. This option don\'t affects any others statistics and the plugin creates an accurate assessment. You may leave 1 to disable this option and hit 1/1 user. You may use left and right arrow keys on your keyboard to decrease or increase this option.', 'gcs'); ?>"></span></td>
+         <td scope="row"><span class="livetv_help" title="<?php _e('Decrease request if your site has a lot of visitors. This option don\'t affects any others statistics and the plugin creates an accurate assessment. You may leave 1 to disable this option and hit 1/1 user. You may use left and right arrow keys on your keyboard to decrease or increase this option.', 'gcs'); ?>"></span></td>
 	  </tr>
       </table><br /><table class="widefat options" style="width: 650px">
         <thead><tr><th colspan="4" class="dashboard-widget-title"><?php _e('Options social networks referers', 'gcs'); ?></th></tr><tr><th colspan="4" class="dashboard-widget-title"><?php _e('World', 'gcs'); ?></th></tr></thead>
@@ -286,7 +236,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row">&nbsp;</td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of facebook.com', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Turn Off or On for statistics survey of facebook.com', 'gcs'); ?>"></span>
           </td>
 	  </tr>
       <tr valign="top">
@@ -301,7 +251,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row">&nbsp;</td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of twitter.com', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Turn Off or On for statistics survey of twitter.com', 'gcs'); ?>"></span>
         </td>
 	  </tr>
       <tr valign="top">
@@ -316,7 +266,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row">&nbsp;</td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of plus.google.com', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Turn Off or On for statistics survey of plus.google.com', 'gcs'); ?>"></span>
         </td>
 	  </tr>
        <tr valign="top">
@@ -331,7 +281,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row">&nbsp;</td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of linkedin.com', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Turn Off or On for statistics survey of linkedin.com', 'gcs'); ?>"></span>
          </td>
 	  </tr>
 	<thead><tr><th colspan="4" class="dashboard-widget-title"><?php _e('Pinboard', 'gcs'); ?></th></tr></thead>
@@ -347,7 +297,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row">&nbsp;</td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of pinterest.com', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Turn Off or On for statistics survey of pinterest.com', 'gcs'); ?>"></span>
         </td>
 	  </tr>
       <tr valign="top">
@@ -362,7 +312,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row">&nbsp;</td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of scoop.it', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Turn Off or On for statistics survey of scoop.it', 'gcs'); ?>"></span>
         </td>
 	  </tr>
 		<thead><tr><th colspan="4" class="dashboard-widget-title"><?php _e('Main China', 'gcs'); ?></th></tr></thead>
@@ -378,7 +328,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row">&nbsp;</td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of qzone.qq.com', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Turn Off or On for statistics survey of qzone.qq.com', 'gcs'); ?>"></span>
         </td>
 	  </tr>
       <tr valign="top">
@@ -393,7 +343,7 @@ function gcs_do_admin_page()
         </td>
          <td scope="row">&nbsp;</td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of weibo.com', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Turn Off or On for statistics survey of weibo.com', 'gcs'); ?>"></span>
         </td>
 	  </tr>
 		<thead><tr><th colspan="4" class="dashboard-widget-title"><?php _e('Main Russia', 'gcs'); ?></th></tr></thead>
@@ -409,99 +359,8 @@ function gcs_do_admin_page()
         </td>
          <td scope="row">&nbsp;</td>
         <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of vk.com', 'gcs'); ?>"></span>
+		  <span class="livetv_help" title="<?php _e('Turn Off or On for statistics survey of vk.com', 'gcs'); ?>"></span>
         </td>
-	  </tr>
-      
-      <thead><tr><th colspan="4" class="dashboard-widget-title"><?php _e('Personal referers', 'gcs'); ?></th></tr></thead>
-      <tr valign="top">
-        <td scope="row" style="width:380px;"><label>
-			<?php _e('Your personal referers', 'gcs'); 
-			$temp = get_option('weibo_referer');
-			?>
-		  </label></td>
-		<td scope="row">
-        <div id="weibo"><input type="text" id="gcs_personal_referers" name="gcs_personal_referers" value="<?php echo get_option('gcs_personal_referers'); ?>" /></div>
-        </td>
-         <td scope="row">&nbsp;</td>
-        <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Add your personal referer seperate by coma (Add only domain.tld without http://www.)', 'gcs'); ?>"></span>
-        </td>
-	  </tr>
-      <?php 
-	  	$personal_referers = get_option('gcs_personal_referers'); 
-		
-	  	if($personal_referers)
-	  	{	
-		  	$count_others = 0;
-		  	$personal_referers = explode(',', $personal_referers); 
-		  	//var_dump($personal_referers);
-		  	foreach($personal_referers as $key => $referer)
-		  	{
-			  	$referer_str = preg_replace(array('#www\.#', '#\.(.+)#'), array('', ''), $referer);
-			  	$temp = get_option('' . $referer_str . '_referer');
-			  	if($temp)
-			  	{
-			  		$count_others++;
-			  	}
-			  	if($count_others > 5)
-			  	{
-				  	echo '<div id="message" class="error fade"><p><strong>';
-					_e('Please decrease your personal active referers or replace some oldest by newest for performance purpose (personal referers active in same time must be < or = to 5 to have already good site performance)', 'gcs');
-					echo '.</strong></p></div>';
-				}
-			  //var_dump($referer_str . ' ' . $temp);
-			  ?>
-			<tr valign="top">
-			<td scope="row" style="width:380px;"><label>
-				<?php _e('Collect statistics for', 'gcs'); echo ' ' . $referer . ' '; _e('referer', 'gcs'); 
-				?>
-			  </label></td>
-			<script type="text/javascript">
-			jQuery(document).ready(function($){
-				$("#<?php echo $referer_str; ?>").buttonset();
-			});
-			</script>
-			<td scope="row">
-			<div id="<?php echo $referer_str; ?>"><input type="radio" id="<?php echo $referer_str; ?>1" name="<?php echo $referer_str; ?>_referer" value="<?php echo $referer; ?>" <?php if($temp == $referer){ echo 'checked="checked"';}?> /><label for="<?php echo $referer_str; ?>1">On</label>
-			<input type="radio" id="<?php echo $referer_str; ?>2" name="<?php echo $referer_str; ?>_referer" value="" <?php if($temp == ''){ echo 'checked="checked"';}?> /><label for="<?php echo $referer_str; ?>2">Off</label></div>
-			</td>
-			 <td scope="row">&nbsp;</td>
-			<td scope="row">
-			  <span class="gcs_help" title="<?php _e('Turn Off or On for statistics survey of', 'gcs'); echo ' ' . $referer; ?>"></span>
-			</td>
-		  </tr>
-      <?php }} ?>
-      </table>
-      <br /><table class="widefat options" style="width: 650px">
-        <thead><tr><th colspan="4" class="dashboard-widget-title"><?php _e('Reset Options', 'gcs'); ?></th></tr></thead>
-	  	<tr valign="top">
-        <td scope="row" style="width:380px;"><label>
-			<?php _e('Reset posts and pages statistics', 'gcs');
-			?>
-		  </label></td>
-		<td scope="row" style="vertical-align:middle">
-        <div id="resetpostspages"><input type="radio" id="resetpostspages1" name="resetpostspages" value="on" /><label for="resetpostspages1">Yes</label>
-		<input type="radio" id="resetpostspages2" name="resetpostspages" value="" checked="checked" /><label for="resetpostspages2">No</label></div>
-        </td>
-         <td scope="row">&nbsp;</td>
-        <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn On to reset all statistics to zero on all posts and pages stats', 'gcs'); ?>"></span>
-          </td>
-	  </tr>
-      <tr valign="top">
-        <td scope="row" style="width:380px;"><label>
-			<?php _e('Reset users statistics', 'gcs');
-			?>
-		  </label></td>
-		<td scope="row" style="vertical-align:middle">
-        <div id="resetusers"><input type="radio" id="resetusers1" name="resetusers" value="on" /><label for="resetusers1">Yes</label>
-		<input type="radio" id="resetusers2" name="resetusers" value="" checked="checked" /><label for="resetusers2">No</label></div>
-        </td>
-         <td scope="row">&nbsp;</td>
-        <td scope="row">
-		  <span class="gcs_help" title="<?php _e('Turn On to reset all statistics to zero for all users stats', 'gcs'); ?>"></span>
-          </td>
 	  </tr>
       </table>
       <p class="submit">
