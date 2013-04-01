@@ -1,6 +1,6 @@
 <?php 
 /*  
-	Copyright 2012  Laurent Bertrand aka Jonathan Maris
+	Copyright 2012  Laurent B. aka Jonathan Maris
 */
 
 // disallow direct access to file

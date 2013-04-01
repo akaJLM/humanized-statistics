@@ -3,13 +3,13 @@
 Plugin Name: Humanized statistics
 Plugin URI: http://jonathanmaris.net
 Description: Statistics for wordpress by post, by page, for home page (sticky posts vs normal posts), by categories, by navigators and more...
-Author: Laurent Bertrand aka Jonathan Maris
+Author: Laurent B. aka Jonathan Maris
 Version: 0.6
 Author URI: http://jonathanmaris.net
 */
 
 /*  
-	Copyright 2012 Laurent Bertrand aka Jonathan Maris
+	Copyright 2012 Laurent B. aka Jonathan Maris
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

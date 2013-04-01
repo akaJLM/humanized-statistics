@@ -1,6 +1,6 @@
 === Humanized statistics ===
 
-Contributors: Laurent Bertrand aka Jonathan Maris
+Contributors: Laurent B. aka Jonathan Maris
 Donate link: http://jonathanmaris.net/
 Tags: statistics users, statistics by page, statistics by categories, statistics for home page, wordpress plugin, Google chart tools, Api google Chart
 Tested up to: 3.4.2
