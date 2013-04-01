@@ -1,7 +1,7 @@
 === Humanized statistics ===
 
-Contributors: KwarK
-Donate link: http://kwark.allwebtuts.net/
+Contributors: Laurent Bertrand aka Jonathan Maris
+Donate link: http://jonathanmaris.net/
 Tags: statistics users, statistics by page, statistics by categories, statistics for home page, wordpress plugin, Google chart tools, Api google Chart
 Tested up to: 3.4.2
 Stable tag: 0.6
