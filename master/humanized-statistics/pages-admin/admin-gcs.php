@@ -1,6 +1,6 @@
 <?php 
 /*  
-	Copyright 2012  Laurent (KwarK) Bertrand  (email : kwark@allwebtuts.net)
+	Copyright 2012  Laurent Bertrand aka Jonathan Maris
 */
 
 // disallow direct access to file
@@ -635,7 +635,7 @@ function gcsplugin_inner_custom_box1($post)
 				$stat_name = explode('_', $nav->meta_key);
 				$stat_name = strtoupper($stat_name[5]);
 				
-				echo '[\''.$stat_name.'\', '.preg_replace('#,#', '.', $stat_value).'],';
+				echo '[\''.$stat_name.'\', '.preg_replace('#, |,#', '.', $stat_value).'],';
 			} 
 			?>
             ]);

@@ -1,6 +1,6 @@
 <?php
 /*  
-	Copyright 2012  Laurent (KwarK) Bertrand  (email : kwark@allwebtuts.net)
+	Copyright 2012  Laurent Bertrand aka Jonathan Maris
 */
 
 // disallow direct access to file
