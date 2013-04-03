@@ -23,7 +23,6 @@ The plugin have an option to decrease request by user like 1/2 or 1/5 or 1/10 us
 3. Define some input in dashboard > Statistics > general configuration
 4. If you don't view the meta box under each post and page, open one post and one page and in the right corner hit "screen options". Select the meta boxes from the plugin.
 
-
 ## Screenshots
 
 * No screenshot actually
