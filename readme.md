@@ -50,4 +50,4 @@ The plugin have an option to decrease request by user like 1/2 or 1/5 or 1/10 us
 > To stay realistic, now the plugin does not make comparison on the latest performance value from one navigator (robots always wins...). Now the plugin register simply the latest value and displays it.
 
 * 0.2
-> Exclude the only one user_meta from the divisor option...
+> Exclude the only one user_meta from the divisor option
