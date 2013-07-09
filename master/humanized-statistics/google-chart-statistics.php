@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Humanized statistics
-Plugin URI: http://jonathanmaris.net
+Plugin URI: http://akajlm.net
 Description: Statistics for wordpress by posts, by pages and for home page (sticky posts vs normal posts), and by categories
 Author: Laurent B. akaJLM
 Version: 0.6
-Author URI: http://jonathanmaris.net
+Author URI: http://akajlm.net
 */
 
 /*  
