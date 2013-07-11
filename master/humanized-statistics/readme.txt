@@ -1,7 +1,7 @@
 === Humanized statistics ===
 
 Contributors: Laurent B. aka akaJLM
-Donate link: http://jonathanmaris.net/
+Donate link: http://akajlm.net/
 Tags: statistics users, statistics by page, statistics by categories, statistics for home page, wordpress plugin, Google chart tools, Api google Chart
 Tested up to: 3.4.2
 Stable tag: 0.6
